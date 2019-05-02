@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -26,6 +27,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import in.paradigmshifters.olivercjoseph.R;
 
@@ -34,14 +36,33 @@ public class Bot extends AppCompatActivity{
     // btnSpeak;
     TextView txtSpeechInput, outputText;
     private Button bckbtn;
+    private TextToSpeech mTTS;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bot);
-        bckbtn=findViewById(R.id.backBtn);
+        bckbtn=findViewById(R.id.backBtn2);
         ImageButton btnSpeaks = findViewById(R.id.btnSpeak);
         txtSpeechInput =findViewById(R.id.txtSpeechInput);
         outputText = findViewById(R.id.outputTex);
+        mTTS=new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status==TextToSpeech.SUCCESS){
+                    int resultSpeech =mTTS.setLanguage(Locale.CANADA);
+
+                    if(resultSpeech==TextToSpeech.LANG_MISSING_DATA
+                    ||resultSpeech==TextToSpeech.LANG_NOT_SUPPORTED){
+                        Log.e("TTS","Language not supported");
+                    }
+
+                }else{
+
+                    Log.e("TTS","Initialization Failed!!");
+                }
+
+            }
+        });
         btnSpeaks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -224,8 +245,23 @@ public class Bot extends AppCompatActivity{
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             outputText.setText(s);
+            speak();
 
         }
     }
+    private void speak() {
+        String text = outputText.getText().toString();
+        mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }
+    @Override
+    protected void onDestroy() {
+        if (mTTS != null) {
+            mTTS.stop();
+            mTTS.shutdown();
+        }
 
+        super.onDestroy();
+    }
 }
+
+
