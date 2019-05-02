@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "578443199647",
+    "firebase_url": "https://mia-test1-chatapp-acfac.firebaseio.com",
+    "project_id": "mia-test1-chatapp-acfac",
+    "storage_bucket": "mia-test1-chatapp-acfac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578443199647:android:f702401d5ace6921",
+        "android_client_info": {
+          "package_name": "in.paradigmshifters.olivercjoseph.mia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578443199647-nvb5hnoofera8f85ar2u89u8odq4j2la.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.paradigmshifters.olivercjoseph.mia",
+            "certificate_hash": "914f9dac9c403780b65655aa0edae8b7e6dc6ac5"
+          }
+        },
+        {
+          "client_id": "578443199647-0t7opctcodivk8ldl5f2tom55c5nq0du.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.paradigmshifters.olivercjoseph.mia",
+            "certificate_hash": "fb5b3d5ebe3791171dd79e6f4fda7b64e6b90ee2"
+          }
+        },
+        {
+          "client_id": "578443199647-tnti6srhca5oc0h052mcf1e6bvk4c4mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB0mlPOxfVz7ZHsmUk-8yx0LMCSkn3_1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578443199647-tnti6srhca5oc0h052mcf1e6bvk4c4mg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
