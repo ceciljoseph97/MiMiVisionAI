@@ -49,7 +49,7 @@ public class Bot extends AppCompatActivity{
             @Override
             public void onInit(int status) {
                 if (status==TextToSpeech.SUCCESS){
-                    int resultSpeech =mTTS.setLanguage(Locale.CANADA);
+                    int resultSpeech =mTTS.setLanguage(Locale.US);
 
                     if(resultSpeech==TextToSpeech.LANG_MISSING_DATA
                     ||resultSpeech==TextToSpeech.LANG_NOT_SUPPORTED){
@@ -138,7 +138,7 @@ public class Bot extends AppCompatActivity{
 
 
 
-    // Create GetText Metod
+    // Create GetText Method
     public String GetText(String query) throws UnsupportedEncodingException {
 
         String text = "";

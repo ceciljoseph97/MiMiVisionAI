@@ -36,4 +36,7 @@
     <string name="listener">Listener</string>
     <string name="user_say">User Say</string>
     <string name="reponse">Reponse</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
