@@ -33,7 +33,7 @@ import in.paradigmshifters.olivercjoseph.R;
 
 public class Bot extends AppCompatActivity{
     private final int REQ_CODE_SPEECH_INPUT = 100;
-    // btnSpeak;
+    /*// btnSpeak;*/
     TextView txtSpeechInput, outputText;
     private Button bckbtn;
     private TextToSpeech mTTS;
