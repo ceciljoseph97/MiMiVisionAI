@@ -98,7 +98,7 @@ public class start_guide extends AppCompatActivity {
         addDotsIndicator(position);
 
         mCurrentPage=position;
-
+     // finding the target tabs
         if(position==0){
             mNextBtn.setEnabled(true);
             mBackBtn.setEnabled(false);
