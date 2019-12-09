@@ -33,6 +33,7 @@ public interface Classifier {
 
     /**
      * Optional location within the source image for the location of the recognized object.
+     only BBox confidence.
      */
     private final RectF location;
 
